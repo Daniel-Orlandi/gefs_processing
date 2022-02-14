@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+   gefs-aws-app:
+     build: 
+        context: .
+        dockerfile: Dockerfile
+
+     image: gefs-aws-app
+
+     container_name: gefs-aws-app      
+ 
+     volumes:
+      - .:/usr/src/app
+
+     # mantém o container aberto, se o mesmo não executa um script
+     tty: true
